@@ -6,11 +6,11 @@ const router = express.Router();
 //const Note = mongoose.model('notes');
 
 router.get('/register', (req, res) => {
-    res.send('register');
+    res.render('users/register');
 });
 
 router.get('/login', (req, res) => {
-    res.send('login');
+    res.render('users/login');
 });
 
 module.exports = router;
