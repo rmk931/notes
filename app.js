@@ -10,7 +10,6 @@ const session = require('express-session');
 
 const app = express();
 
-//routes
 const notes = require('./routes/notes');
 const users = require('./routes/users');
 
@@ -18,7 +17,7 @@ require('./config/passport')(passport);
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://rmk9:linkin96ralf86@ds255309.mlab.com:55309/videa_db')
+mongoose.connect('mongodb://user:password@url')
 .then(() => console.log('Connected to db.'))
 .catch(err => console.error(err));
 
