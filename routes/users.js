@@ -31,7 +31,7 @@ router.post('/login', (req, res, next) => {
 router.post('/register', (req, res) => {
     let errors = [];
 
-    if(req.body.password != req.body.password2){
+    if(req.body.password != req.body.confirmPassword){
         errors.push({text:'Passwords do not match'});
     }
 
@@ -45,7 +45,7 @@ router.post('/register', (req, res) => {
             name: req.body.name,
             email: req.body.email,
             password: req.body.password,
-            password2: req.body.password2
+            confirmPassword: req.body.confirmPassword
         });
     } else {
       User.findOne({email: req.body.email})
